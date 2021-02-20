@@ -4,12 +4,10 @@ const button = document.getElementById("submit");
 
 button.addEventListener("click", function() {
   email= document.getElementById("email");
-
+  // Email validation.
   if(emailRegex.test(email.value)) {
-    console.log('correct');
     document.getElementById("email").classList.remove("email-error");
   } else {
-    console.log('error');
     document.getElementById("email").classList.add("email-error");
   }
   window.location=`response.html?mail=${email.value}`;

@@ -7,30 +7,27 @@ document.getElementById("response").innerText = "Please wait a moment...";
 
 const query = window.location.search.substring(1);
 
+// Get URL parameters and send to the api function.
 const vars = query.split("&");
 for (let i=0; i < vars.length; i++) {
   var pair = vars[i].split("=");
 }
-
-info(pair[1]);
+loadApiInfo(pair[1]);
 
 button.addEventListener("click", function() {
   email= document.getElementById("email");
-
+  // Email validation.
   if(emailRegex.test(email.value)) {
-    console.log('correct');
     document.getElementById("email").classList.remove("email-error");
   } else {
-    console.log('error');
     document.getElementById("email").classList.add("email-error");
   }
-  info(email.value);
+  loadApiInfo(email.value);
   window.location=`response.html?mail=${email.value}`;
 });
 
-console.log(email.value);
-
-function info (value) {
+// Get api info.
+function loadApiInfo (value) {
   fetch(`https://ltv-data-api.herokuapp.com/api/v1/records.json?email=${value}`)
     .then(
       function(response) {
@@ -66,6 +63,7 @@ function info (value) {
     });
 }
 
+// Create Info Box with results from the api.
 function addInfoBox(data) {
   let div = document.createElement('div');
   div.className = "wrapper";
