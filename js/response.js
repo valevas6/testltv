@@ -19,11 +19,11 @@ button.addEventListener("click", function() {
   // Email validation.
   if(emailRegex.test(email.value)) {
     document.getElementById("email").classList.remove("email-error");
+    window.location=`response.html?mail=${email.value}`;
+    loadApiInfo(email.value);
   } else {
     document.getElementById("email").classList.add("email-error");
   }
-  loadApiInfo(email.value);
-  window.location=`response.html?mail=${email.value}`;
 });
 
 // Get api info.
