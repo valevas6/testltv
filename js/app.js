@@ -11,5 +11,14 @@ button.addEventListener("click", function() {
     window.location=`response.html?mail=${email.value}`;
   } else {
     document.getElementById("email").classList.add("email-error");
+    errorInput()
   }
 });
+
+// Create error input message.
+function errorInput() {
+  let span = document.createElement('span');
+  span.className = "red-background";
+  span.innerHTML = 'Please add a valid email address';
+  document.getElementById("input-container").append(span);
+}

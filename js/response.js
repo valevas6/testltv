@@ -23,6 +23,7 @@ button.addEventListener("click", function() {
     loadApiInfo(email.value);
   } else {
     document.getElementById("email").classList.add("email-error");
+    errorInput();
   }
 });
 
@@ -82,4 +83,12 @@ function addInfoBox(data) {
     item.innerHTML = value;
     document.getElementById("resRelatives").appendChild(item);
   });
+}
+
+// Create error input message.
+function errorInput() {
+  let span = document.createElement('span');
+  span.className = "red-background";
+  span.innerHTML = 'Please add a valid email address';
+  document.getElementById("input-container").append(span);
 }

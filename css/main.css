@@ -6,6 +6,21 @@
   background-color: #F8F8F8;
 }
 
+.red-background {
+  background-color: red;
+  padding: 0.3rem;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .red-background {
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .margin-right {
   margin-right: 1rem;
 }
