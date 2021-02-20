@@ -1,0 +1,19 @@
+{
+    "name": "livetimevalue_text",
+    "description": "Test proyect",
+    "version": "1.0.0",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/valevas6/testltv.git"
+    },
+    "keywords": [],
+    "author": "Valeria Vasquez",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/valevas6/testltv/issues"
+    },
+    "homepage": "https://github.com/valevas6/testltv"
+  }
