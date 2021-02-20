@@ -39,7 +39,7 @@ function loadApiInfo (value) {
         }
         response.json().then(function(data) {
           document.getElementById("spinner").classList.remove("hidden"); 
-            document.getElementById("spinner").classList.add("visible");
+          document.getElementById("spinner").classList.add("visible");
           if(data.length === 0) {
             setTimeout(function() {
               document.getElementById("main-container").classList.add("response-padding"); 
@@ -50,6 +50,7 @@ function loadApiInfo (value) {
 
           } else {
             setTimeout(function() {
+              document.getElementById("finder").classList.remove("finder-mobile"); 
               document.getElementById("spinner").classList.add("hidden"); 
               document.getElementById("response").innerText = "1 Results"
               document.getElementById("description").innerText = "Look at the result below to see the details of the person you’re searched for.";

@@ -282,6 +282,12 @@ p {
   padding: 90px 0 120px;
 }
 
+.finder-mobile {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
 
 
 

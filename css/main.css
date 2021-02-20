@@ -333,4 +333,10 @@ p {
 .response-padding {
   padding: 90px 0 120px;
 }
+
+@media only screen and (max-width: 768px) {
+  .finder-mobile {
+    display: none;
+  }
+}
 /*# sourceMappingURL=main.css.map */
