@@ -7,9 +7,9 @@ button.addEventListener("click", function() {
   // Email validation.
   if(emailRegex.test(email.value)) {
     document.getElementById("email").classList.remove("email-error");
+    // Send email parameter. 
+    window.location=`response.html?mail=${email.value}`;
   } else {
     document.getElementById("email").classList.add("email-error");
   }
-  // Send email parameter. 
-  window.location=`response.html?mail=${email.value}`;
 });

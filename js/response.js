@@ -41,26 +41,26 @@ function loadApiInfo (value) {
             document.getElementById("spinner").classList.add("visible");
           if(data.length === 0) {
             setTimeout(function() {
-                document.getElementById("main-container").classList.add("response-padding"); 
-                document.getElementById("response").innerText = "0 Results";
-                document.getElementById("description").innerText = "Try starting a new search below";
-                document.getElementById("spinner").classList.add("hidden"); 
+              document.getElementById("main-container").classList.add("response-padding"); 
+              document.getElementById("response").innerText = "0 Results";
+              document.getElementById("description").innerText = "Try starting a new search below";
+              document.getElementById("spinner").classList.add("hidden"); 
             }, 2000);
 
           } else {
             setTimeout(function() {
-                document.getElementById("spinner").classList.add("hidden"); 
-                document.getElementById("response").innerText = "1 Results"
-                document.getElementById("description").innerText = "Look at the result below to see the details of the person you’re searched for.";
-                addInfoBox(data);
+              document.getElementById("spinner").classList.add("hidden"); 
+              document.getElementById("response").innerText = "1 Results"
+              document.getElementById("description").innerText = "Look at the result below to see the details of the person you’re searched for.";
+              addInfoBox(data);
             }, 2000);
           }
         });
       }
     )
     .catch(function(err) {
-        document.getElementById("response").innerText = "0 Results"
-        document.getElementById("description").innerText = "Try starting a new search below"
+      document.getElementById("response").innerText = "0 Results"
+      document.getElementById("description").innerText = "Try starting a new search below"
     });
 }
 
