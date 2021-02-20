@@ -41,6 +41,7 @@ function loadApiInfo (value) {
             document.getElementById("spinner").classList.add("visible");
           if(data.length === 0) {
             setTimeout(function() {
+                document.getElementById("main-container").classList.add("response-padding"); 
                 document.getElementById("response").innerText = "0 Results";
                 document.getElementById("description").innerText = "Try starting a new search below";
                 document.getElementById("spinner").classList.add("hidden"); 

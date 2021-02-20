@@ -72,17 +72,17 @@ p {
 }
 
 .font-22 {
-  font-size: 22px;
+  font-size: 1.375rem;
 
   @media only screen and (max-width: 768px) {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 .font-24 {
-  font-size: 24px;
+  font-size: 1.5rem;
 
   @media only screen and (max-width: 768px) {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -91,15 +91,15 @@ p {
 }
 
 .font-18 {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .font-16 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .font-14 {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .margin-botton {
@@ -107,13 +107,13 @@ p {
 }
 
 .button-yellow {
-  padding: 5px 40px;
-  border-radius: 5px;
+  padding: 0.3rem 2.5rem;
+  border-radius: 2.5rem;
   border-bottom: 5px solid $yellow-dark;
   background-color: $yellow;
   color: $blue;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-left: 1rem;
 
   &:hover {
@@ -159,6 +159,11 @@ p {
   @media only screen and (max-width: 768px) {
     margin: 0; 
   }
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .flex-wrapper {
@@ -210,10 +215,18 @@ p {
 
 .flex-circle {
   flex: 1 0 30%;
+
+  @media only screen and (max-width: 768px) {
+    flex: 1 0 13%;
+  }
 }
 
 .flex-content {
   flex: 1 0 70%;
+
+  @media only screen and (max-width: 768px) {
+    flex: 1 0 80%;
+  }
 }
 
 .terms-text {
@@ -252,6 +265,10 @@ p {
   height: auto;
   box-shadow: 2px 2px 10px #666;
   border-radius: 15px;
+}
+
+.response-padding {
+  padding: 90px 0 120px;
 }
 
 
