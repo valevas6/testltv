@@ -16,5 +16,5 @@
     "url": "https://github.com/valevas6/testltv/issues"
   },
   "homepage": "https://github.com/valevas6/testltv",
-  "main": "index.js"
+  "main": "index.html"
 }
