@@ -10,5 +10,6 @@ button.addEventListener("click", function() {
   } else {
     document.getElementById("email").classList.add("email-error");
   }
+  // Send email parameter. 
   window.location=`response.html?mail=${email.value}`;
 });
