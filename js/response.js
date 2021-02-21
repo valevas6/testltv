@@ -1,7 +1,7 @@
 let email= document.getElementById("email");
 const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 const button = document.getElementById("submit");
-
+let error = false;
 const url = window.location.href;
 document.getElementById("response").innerText = "Please wait a moment...";
 
@@ -88,8 +88,11 @@ function addInfoBox(data) {
 
 // Create error input message.
 function errorInput() {
-  let span = document.createElement('span');
-  span.className = "red-background";
-  span.innerHTML = 'Please add a valid email address';
-  document.getElementById("input-container").append(span);
+  if (!error) {
+    let span = document.createElement('span');
+    span.className = "red-background";
+    span.innerHTML = 'Please add a valid email address';
+    document.getElementById("input-container").append(span);
+    error = true;
+  } 
 }
